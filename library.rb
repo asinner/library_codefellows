@@ -18,25 +18,19 @@ class Library
     
     # Empty books array
     books = []
-    
+
     # Iterate through the shelves in the library
-    self.shelves.each do |shelf|
-      
+    self.shelves.each do |shelf|      
       # Iterate through books on each shelf
       shelf.books.each do |book|
-        
         # Put book into array
         books.push(book)
-        
       end
-      
     end
     
+    # Return
     return books;
-    
   end
-
-
 end
 
 class Shelf
@@ -65,11 +59,10 @@ class Book
     # Put the book on the shelf
     self.shelf.books.push(self)
     
-    return self
-    
+    return self   
   end
   
-  # Unsehlf the book
+  # Unshelf the book
   def unshelf
     if self.shelf
       self.shelf.books.delete(self)
